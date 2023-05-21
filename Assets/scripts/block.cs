@@ -1,31 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class block : MonoBehaviour
 {
-    Collider2D col;
-    Rigidbody2D rb;
-    Vector2 lastVelocity;
-    // Start is called before the first frame update
-    void Start()
+    int CollisionCount = 0;
+    public Text text;
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        rb = GetComponent<Rigidbody2D>();
+        CollisionCount++;
+        text.text=CollisionCount.ToString();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    private void OnCollisionExit2D(Collision2D col)
-
-    {
-
-        Debug.Log("충돌 끝!");
-
-    }
-
-
 }
