@@ -9,6 +9,6 @@ public class move : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(Vector3.left * 300, ForceMode2D.Impulse);
+        rb.AddForce(Vector3.left * 3000000, ForceMode2D.Impulse);
     }
 }
